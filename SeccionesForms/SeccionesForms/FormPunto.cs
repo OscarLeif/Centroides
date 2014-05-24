@@ -83,5 +83,20 @@ namespace SeccionesForms
             }
         }
         #endregion 
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+
+        private void textBoxY_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Return)
+            {
+                ButtonAceptar_Click(sender, e);
+            }
+        }
     }
 }

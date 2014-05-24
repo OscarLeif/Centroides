@@ -22,8 +22,8 @@ namespace SeccionesForms
             // TODO: Complete member initialization
             this.formPrincipal = formPrincipal;
             InitializeComponent();
-            listView1.View = View.Details;
-            listView1.Columns.Add("File type", 20, HorizontalAlignment.Left);
+            listViewPuntos.View = View.Details;
+            listViewPuntos.Columns.Add("File type", 20, HorizontalAlignment.Left);
             _PoligSeleccionado = new Polygon();
         }
 
@@ -32,10 +32,10 @@ namespace SeccionesForms
             if (e.Button == MouseButtons.Right)
             {
                 ContextMenuStrip cms = new ContextMenuStrip();
-                cms.Items.Add("Item title", null, mnuInsertarPunto_Click);
+                cms.Items.Add("Agregar nuevo punto", null, mnuInsertarPunto_Click);
                 //Button btnSender = (Button)sender;
-                Point ptLowerLeft = new Point(0, listView1.Width);
-                ptLowerLeft = listView1.PointToScreen(ptLowerLeft);
+                Point ptLowerLeft = new Point(0, listViewPuntos.Width);
+                ptLowerLeft = listViewPuntos.PointToScreen(ptLowerLeft);
                 cms.Show(ptLowerLeft);
                 //cms.Show();
                 
@@ -50,11 +50,11 @@ namespace SeccionesForms
         public void Actualizar(Polygon PoligonoSeleccionado)
         {
             this._PoligSeleccionado = PoligonoSeleccionado;
-            this.listView1.Items.Clear();
+            this.listViewPuntos.Items.Clear();
             contadorLista = 0;
             foreach (Punto current in this._PoligSeleccionado.Puntos)
             {
-                ListViewItem listViewItem = this.listView1.Items.Add(contadorLista.ToString());
+                ListViewItem listViewItem = this.listViewPuntos.Items.Add(contadorLista.ToString());
                 listViewItem.SubItems.Add(current.x.ToString());
                 listViewItem.SubItems.Add(current.y.ToString());
                 contadorLista++;
