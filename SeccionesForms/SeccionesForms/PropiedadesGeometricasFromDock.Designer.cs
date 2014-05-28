@@ -36,9 +36,12 @@ namespace SeccionesForms
             // 
             // propertyGrid1
             // 
+            this.propertyGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.propertyGrid1.Location = new System.Drawing.Point(12, 12);
             this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(260, 237);
+            this.propertyGrid1.Size = new System.Drawing.Size(260, 359);
             this.propertyGrid1.TabIndex = 0;
             // 
             // PropiedadesGeometricasFromDock
@@ -47,19 +50,12 @@ namespace SeccionesForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 383);
             this.Controls.Add(this.propertyGrid1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "PropiedadesGeometricasFromDock";
             this.Text = "PropiedadesGeometricasFromDOck";
             this.ResumeLayout(false);
-
-            //this.pgdPropsGeom = new PropertyGrid();
-            this.SuspendLayout();
-            //this.pgdPropsGeom.Dock = DockStyle.Fill;
-            //this.pgdPropsGeom.Location = new Point(0, 2);
-            //this.pgdPropsGeom.Name = "pgdPropsGeom";
-          
 
         }
 

@@ -33,6 +33,7 @@ namespace SeccionesForms
             InitializeComponent();
             zedGraphControl1.GraphPane.YAxis.Cross = 0.0;
             zedGraphControl1.GraphPane.AxisChange();
+            this.zedGraphControl1.GraphPane.Title.Text = "Centroides";
             this.AutoScaleDimensions = new SizeF(6f, 13f);
             this.AutoScaleMode = AutoScaleMode.Font;
             this._PoligSeleccionado = formPrincipal._PolygonoPrincipal;
@@ -119,6 +120,7 @@ namespace SeccionesForms
             this.zedGraphControl1.IsShowPointValues = true;
             this.zedGraphControl1.AxisChange();
             this.zedGraphControl1.Invalidate();
+
         }
 
         public void DibujarCentroide(Polygon Pol, Color color, float Tamanio)
